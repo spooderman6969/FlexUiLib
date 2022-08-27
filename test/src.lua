@@ -3,7 +3,7 @@ local Lighting = game:GetService("Lighting")
 
 local lib = {}
 
-function lib:CreateWindow(Name)
+function lib:CreateWindow(title)
     local uilib = Instance.new("ScreenGui")
     local Window = Instance.new("Frame")
     local UICorner = Instance.new("UICorner")
@@ -53,7 +53,7 @@ function lib:CreateWindow(Name)
     title.Position = UDim2.new(0.0218978096, 0, 0.410286874, 0)
     title.Size = UDim2.new(0, 85, 0, 15)
     title.Font = Enum.Font.GothamBlack
-    title.Text = Name
+    title.Text = title
     title.TextColor3 = Color3.fromRGB(107, 107, 107)
     title.TextScaled = true
     title.TextSize = 14.000
@@ -79,6 +79,20 @@ function lib:CreateWindow(Name)
     UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
     UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
     UIListLayout.Padding = UDim.new(0, 20)
+
+    local Tabs = {}
+
+    function lib:CreateTab(icon)
+        local ImageButton = Instance.new("ImageButton")
+
+        ImageButton.Parent = buttons
+        ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        ImageButton.BackgroundTransparency = 1.000
+        ImageButton.Position = UDim2.new(0, 0, 0.236842111, 0)
+        ImageButton.Size = UDim2.new(0, 20, 0, 20)
+        ImageButton.Image = icon
+    end
+    return Tabs
 end
 return lib
 
