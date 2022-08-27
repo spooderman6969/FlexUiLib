@@ -3,7 +3,7 @@ local Lighting = game:GetService("Lighting")
 
 local lib = {}
 
-function lib:CreateWindow(title)
+function lib:CreateWindow(Name)
     local uilib = Instance.new("ScreenGui")
     local Window = Instance.new("Frame")
     local UICorner = Instance.new("UICorner")
@@ -53,7 +53,7 @@ function lib:CreateWindow(title)
     title.Position = UDim2.new(0.0218978096, 0, 0.410286874, 0)
     title.Size = UDim2.new(0, 85, 0, 15)
     title.Font = Enum.Font.GothamBlack
-    title.Text = title
+    title.Text = Name
     title.TextColor3 = Color3.fromRGB(107, 107, 107)
     title.TextScaled = true
     title.TextSize = 14.000
