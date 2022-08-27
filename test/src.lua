@@ -82,7 +82,7 @@ function lib:CreateWindow(Name)
 
     local Tabs = {}
 
-    function lib:CreateTab(icon)
+    function lib:CreateTab(iconID)
         local ImageButton = Instance.new("ImageButton")
 
         ImageButton.Parent = buttons
@@ -90,9 +90,9 @@ function lib:CreateWindow(Name)
         ImageButton.BackgroundTransparency = 1.000
         ImageButton.Position = UDim2.new(0, 0, 0.236842111, 0)
         ImageButton.Size = UDim2.new(0, 20, 0, 20)
-        ImageButton.Image = icon
+        ImageButton.Image = iconID
     end
-    return Tabs
+    return Tabs;
 end
-return lib
+return lib;
 
