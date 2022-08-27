@@ -53,7 +53,7 @@ function lib:CreateWindow(title)
     title.Position = UDim2.new(0.0218978096, 0, 0.410286874, 0)
     title.Size = UDim2.new(0, 85, 0, 15)
     title.Font = Enum.Font.GothamBlack
-    title.Text = title or "Flex UI Lib"
+    title.Text = title
     title.TextColor3 = Color3.fromRGB(107, 107, 107)
     title.TextScaled = true
     title.TextSize = 14.000
