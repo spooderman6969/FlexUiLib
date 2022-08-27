@@ -80,9 +80,9 @@ function lib:CreateWindow(Name)
     UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
     UIListLayout.Padding = UDim.new(0, 20)
 
-    local Tabs = {}
+    local epic = {}
 
-    function lib:CreateTab(iconID)
+    function epic:CreateTab(iconID)
         local ImageButton = Instance.new("ImageButton")
 
         ImageButton.Parent = buttons
@@ -92,7 +92,7 @@ function lib:CreateWindow(Name)
         ImageButton.Size = UDim2.new(0, 20, 0, 20)
         ImageButton.Image = iconID
     end
-    return Tabs;
+    return epic;
 end
 return lib;
 
